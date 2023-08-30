@@ -1,2 +1,2 @@
-const domContainer = document.getElementById( '#root');
-console.warn( domContainer );
+const domContainer = document.getElementById('root');
+console.log( domContainer );
