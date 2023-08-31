@@ -1,2 +1,5 @@
 const domContainer = document.getElementById('root');
-console.log( domContainer );
+
+
+const newElement = React.createElement( 'p', { className: 'my-class' }, 'This is a test paragraph');
+console.warn( newElement )
