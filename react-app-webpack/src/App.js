@@ -2,7 +2,9 @@ import React from 'react';
 import './style.css';
 import Lydia from './images/headshot.png';
 import ClassComponent from './components/ClassComponent';
-import FunctionalComponent from './components/FunctionalComponent';
+//use curly braces when there are multiple being exported from same file or when the export is not default
+import { FunctionalComponent } from './components/FunctionalComponent';
+import { AnotherComponent } from './components/FunctionalComponent';
 
 //using ES6 here
 
@@ -31,6 +33,7 @@ class App extends React.Component {
                 <div>
                     <ClassComponent/>
                     <FunctionalComponent/>
+                    <AnotherComponent/>
                 </div>
             </div>
         )
