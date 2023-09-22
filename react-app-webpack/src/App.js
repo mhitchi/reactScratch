@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import Lydia from './images/headshot.png';
+import ClassComponent from './components/ClassComponent';
 //using ES6 here
 
 
@@ -25,6 +26,9 @@ class App extends React.Component {
                 <button onClick={this.handleButtonClickEvent}>Click me</button>
                 { this.state.name && <p>{this.state.name}</p> }
                 <img src={Lydia} alt="Lydia image"/>
+                <div>
+                    <ClassComponent/>
+                </div>
             </div>
         )
     }
