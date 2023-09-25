@@ -23,8 +23,13 @@ class App extends React.Component {
         this.setState( { name: 'Marm' });
     };
 
-    render() {
+    formatName = ( user ) => {
+        //backtick is for string and variable concat
+        return `Super ${user}`;
+    }
 
+    render() {
+        //example 1
         const element = <h1>Hello World</h1>;
         let name;
         if (this.state.name) {
@@ -32,7 +37,20 @@ class App extends React.Component {
         } else {
             name = "you";
         }
+        //example 2
         const elementTwo = <h2>Hello, {name}</h2>
+
+        //example 3
+        const elementThree = (
+            <div className="my-class">
+                <h2>Hello, { this.formatName( name ) }</h2>
+                <label htmlFor="name">
+                    <input type="text" id="name">
+
+                    </input>
+                </label>
+            </div>
+        )
 
         return(
             <div>
