@@ -24,16 +24,29 @@ class App extends React.Component {
     };
 
     render() {
+
+        const element = <h1>Hello World</h1>;
+        let name;
+        if (this.state.name) {
+            name = this.state.name;
+        } else {
+            name = "you";
+        }
+        const elementTwo = <h2>Hello, {name}</h2>
+
         return(
             <div>
-                <h1>This is the component.</h1>
+                {element}
+                {/* <h3>This is the component.</h3> */}
                 <button onClick={this.handleButtonClickEvent}>Click me</button>
-                { this.state.name && <p>{this.state.name}</p> }
+                {/* { this.state.name && <p>{this.state.name}</p> } */}
                 <img src={Lydia} alt="Lydia image"/>
                 <div>
-                    <ClassComponent/>
+                    <div>{element}
+                    {elementTwo}</div>
+                    {/* <ClassComponent/>
                     <FunctionalComponent/>
-                    <AnotherComponent/>
+                    <AnotherComponent/> */}
                 </div>
             </div>
         )
