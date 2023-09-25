@@ -51,6 +51,12 @@ class App extends React.Component {
                 </label>
             </div>
         )
+        //example four
+        const myUser = {
+            avatarUrl: "https://via.placeholder.com/150"
+        };
+
+        const elementFour = <img src={ myUser.avatarUrl} alt="My image"/>
 
         return(
             <div>
@@ -61,7 +67,9 @@ class App extends React.Component {
                 <img src={Lydia} alt="Lydia image"/>
                 <div>
                     <div>{element}
-                    {elementTwo}</div>
+                    {elementTwo}
+                    {elementThree}
+                    {elementFour}</div>
                     {/* <ClassComponent/>
                     <FunctionalComponent/>
                     <AnotherComponent/> */}
