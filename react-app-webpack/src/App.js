@@ -1,4 +1,5 @@
 import React from 'react';
+import { Router } from '@reach/router';
 import './style.css';
 import Lydia from './images/headshot.png';
 import ClassComponent from './components/ClassComponent';
@@ -59,22 +60,27 @@ class App extends React.Component {
         const elementFour = <img src={ myUser.avatarUrl} alt="My image"/>
 
         return(
-            <div>
-                {element}
-                {/* <h3>This is the component.</h3> */}
-                <button onClick={this.handleButtonClickEvent}>Click me</button>
-                {/* { this.state.name && <p>{this.state.name}</p> } */}
-                <img src={Lydia} alt="Lydia image"/>
-                <div>
-                    <div>{element}
-                    {elementTwo}
-                    {elementThree}
-                    {elementFour}</div>
-                    {/* <ClassComponent/>
-                    <FunctionalComponent/>
-                    <AnotherComponent/> */}
-                </div>
-            </div>
+            <Router>
+                <Home path="/"/>
+                <About path="/about/"/>
+                <Contact path="/contact-us/"/>
+            </Router>
+            // <div>
+            //     {element}
+            //     {/* <h3>This is the component.</h3> */}
+            //     <button onClick={this.handleButtonClickEvent}>Click me</button>
+            //     {/* { this.state.name && <p>{this.state.name}</p> } */}
+            //     <img src={Lydia} alt="Lydia image"/>
+            //     <div>
+            //         <div>{element}
+            //         {elementTwo}
+            //         {elementThree}
+            //         {elementFour}</div>
+            //         {/* <ClassComponent/>
+            //         <FunctionalComponent/>
+            //         <AnotherComponent/> */}
+            //     </div>
+            // </div>
         )
     }
 }
