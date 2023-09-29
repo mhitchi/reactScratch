@@ -1,11 +1,15 @@
 import React from 'react';
-import { Router } from '@reach/router';
+// import { Router } from '@gatsbyjs/reach-router';
 import './style.css';
 import Lydia from './images/headshot.png';
 import ClassComponent from './components/ClassComponent';
 //use curly braces when there are multiple being exported from same file or when the export is not default
 import { FunctionalComponent } from './components/FunctionalComponent';
 import { AnotherComponent } from './components/FunctionalComponent';
+// import Nav from "./components/Nav";
+// import Home from "./components/Home";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
 
 //using ES6 here
 
@@ -60,27 +64,29 @@ class App extends React.Component {
         const elementFour = <img src={ myUser.avatarUrl} alt="My image"/>
 
         return(
-            <Router>
-                <Home path="/"/>
-                <About path="/about/"/>
-                <Contact path="/contact-us/"/>
-            </Router>
-            // <div>
-            //     {element}
-            //     {/* <h3>This is the component.</h3> */}
-            //     <button onClick={this.handleButtonClickEvent}>Click me</button>
-            //     {/* { this.state.name && <p>{this.state.name}</p> } */}
-            //     <img src={Lydia} alt="Lydia image"/>
-            //     <div>
-            //         <div>{element}
-            //         {elementTwo}
-            //         {elementThree}
-            //         {elementFour}</div>
-            //         {/* <ClassComponent/>
-            //         <FunctionalComponent/>
-            //         <AnotherComponent/> */}
-            //     </div>
-            // </div>
+            // <Router>
+            //     <Home path="/"/>
+            //     <About path="/about/"/>
+            //     <Contact path="/contact-us/"/>
+            // </Router>
+
+
+            <div>
+                {element}
+                {/* <h3>This is the component.</h3> */}
+                <button onClick={this.handleButtonClickEvent}>Click me</button>
+                {/* { this.state.name && <p>{this.state.name}</p> } */}
+                <img src={Lydia} alt="Lydia image"/>
+                <div>
+                    <div>{element}
+                    {elementTwo}
+                    {elementThree}
+                    {elementFour}</div>
+                    {/* <ClassComponent/>
+                    <FunctionalComponent/>
+                    <AnotherComponent/> */}
+                </div>
+            </div>
         )
     }
 }
