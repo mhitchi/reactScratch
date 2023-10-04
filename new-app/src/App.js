@@ -25,7 +25,13 @@ import Home from './components/Home';
 // }
 
 class App extends Component {
-  getDerivedStateFromProps( props, state) {
+
+  //initialize state
+  constructor( props ) {
+    //makes this.props available by overriding parent constructor method by redefining it
+    super( props );
+  }
+  static getDerivedStateFromProps( props, state) {
     console.warn( props );
     return null
   }
