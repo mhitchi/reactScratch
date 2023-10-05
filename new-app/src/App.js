@@ -31,11 +31,14 @@ class App extends Component {
     //makes this.props available by overriding parent constructor method by redefining it
     super( props );
   }
+
+  //called
   static getDerivedStateFromProps( props, state) {
     console.warn( props );
     return null
   }
 
+  //if state or props change, render is called again
   render() {
     return (
       <Home data="Some data"/>
