@@ -34,14 +34,18 @@ class App extends Component {
 
   //called
   static getDerivedStateFromProps( props, state) {
-    console.warn( props );
+    console.warn( 'getDerivedStateFromProps is called' );
+    console.warn( 'props:', props );
     return null
   }
 
   //if state or props change, render is called again
   render() {
     return (
-      <Home data="Some data"/>
+      <div>
+        <Home data="Some data"/>
+        <button onClick={this.handleClickEvent}>Click here</button>
+      </div>
     )
   }
 }
