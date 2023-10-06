@@ -32,7 +32,7 @@ class App extends Component {
     super( props );
   }
 
-  //called
+  //called 1, 3, 4
   static getDerivedStateFromProps( props, state) {
     console.warn( 'getDerivedStateFromProps is called' );
     console.warn( 'props:', props );
@@ -43,7 +43,9 @@ class App extends Component {
   handleClickEvent = () => {
     // this.setState( { name: 'Marm'} );
     this.forceUpdate( () => {
+      //called 2
       console.warn( 'The component is updated');
+      this.setState( { name: 'Marm'} );
     })
   }
 
