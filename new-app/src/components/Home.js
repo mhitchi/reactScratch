@@ -13,7 +13,15 @@ class Home extends React.Component {
         //since no API, setinterval
         this.myInterval =  setInterval( () => {
             this.setState({ number: 0 })
-        })
+        }, 1000)
+    }
+
+    shouldComponentUpdate( nextProps, nextState ) {
+        if ( nextState.number === this.state.number ) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     componentWillUnmount() {
