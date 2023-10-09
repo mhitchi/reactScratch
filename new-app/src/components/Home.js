@@ -29,17 +29,22 @@ class Home extends React.Component {
     //     clearInterval( this.myInterval );
     // }
 
-    constructor( props ) {
-        super( props );
+
+    constructor( props) {
+        super(props) 
 
         this.state = {
-            name: ''
+            age: ''
         }
     }
+    handleOnclick = () => {
+        this.setState( {age:28} )
+    }
 
-    handleOnClick = () => {
-        this.setState( { name: 'Doodle ' })
-    };
+    getSnapshotBeforeUpdate( prevProps, prevState ) {
+        console.warn( 'previousprops:', prevProps);
+        console.warn( 'previousstate:', prevState )
+    }
 
     render() {
         console.warn( 'rendered', this.props)

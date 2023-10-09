@@ -45,7 +45,7 @@ class App extends Component {
     this.forceUpdate( () => {
       //called 2
       console.warn( 'The component is updated');
-      this.setState( { name: 'Marm'} );
+      // this.setState( { name: 'Marm'} );
     })
   }
 
