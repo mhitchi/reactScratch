@@ -30,27 +30,43 @@ class Home extends React.Component {
     // }
 
 
-    constructor( props) {
-        super(props) 
+    // constructor( props) {
+    //     super(props) 
 
-        this.state = {
-            age: ''
-        }
-    }
-    handleOnclick = () => {
-        this.setState( {age:28} )
+    //     this.state = {
+    //         age: ''
+    //     }
+    // }
+    // handleOnclick = () => {
+    //     this.setState( {age:28} )
+    // }
+
+    // getSnapshotBeforeUpdate( prevProps, prevState ) {
+    //     console.warn( 'previousprops:', prevProps );
+    //     console.warn( 'previousstate:', prevState );
+    //     return 'xyz';
+    // }
+
+    // componentDidUpdate( prevProps, prevState, snapshot ) {
+    //     console.warn( 'snapshot:', snapshot)
+    // }
+
+    constructor( props ) {
+        super(props) ;
+
+        console.warn( 'constructor called')
     }
 
-    getSnapshotBeforeUpdate( prevProps, prevState ) {
-        console.warn( 'previousprops:', prevProps);
-        console.warn( 'previousstate:', prevState )
-    }
 
+    componentDidMount() {
+
+        console.warn( 'didMount called' )
+    }
     render() {
-        console.warn( 'rendered', this.props)
+        console.warn( 'render called')
         return(
             <div>
-                <button onClick={this.handleOnClick}>Click Over Here</button>
+                {/* <button onClick={this.handleOnClick}>Click Over Here</button> */}
             </div>
         )
     }
